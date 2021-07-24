@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:some_game_app/constants.dart';
 class ChampionShard extends StatelessWidget {
@@ -11,9 +13,12 @@ class ChampionShard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
+      /*child: Image(
+        image: AssetImage("assets/immagini/campioni/kaisa.png",),
+        fit: BoxFit.cover,
+      ),*/
       margin: EdgeInsets.only(top: 10),
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: kDefaultPadding),
+      //padding: EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: kDefaultPadding),
       width: size.width * 0.95 ,
       height: size.width * 0.25,
       decoration: BoxDecoration(
@@ -22,7 +27,11 @@ class ChampionShard extends StatelessWidget {
           boxShadow: [BoxShadow(
               offset: Offset(0,10),
               blurRadius: 50,
-              color: kPrimaryColor),]
+              color: kPrimaryColor),],
+        image: DecorationImage(
+          image: ExactAssetImage("assets/immagini/campioni/kaisa.png"),
+          fit: BoxFit.fill
+        )
       ),
     );
   }
