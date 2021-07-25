@@ -5,13 +5,15 @@ import 'package:some_game_app/constants.dart';
 class ChampionShard extends StatelessWidget {
   const ChampionShard({
     Key? key,
-    required this.size,
+    required this.size, required this.image,
   }) : super(key: key);
 
   final Size size;
-
+  final String _path = "assets/immagini/campioni/";
+  final String image;
   @override
   Widget build(BuildContext context) {
+
     return Container(
       /*child: Image(
         image: AssetImage("assets/immagini/campioni/kaisa.png",),
@@ -29,8 +31,9 @@ class ChampionShard extends StatelessWidget {
               blurRadius: 50,
               color: kPrimaryColor),],
         image: DecorationImage(
-          image: ExactAssetImage("assets/immagini/campioni/kaisa.png"),
+          image: ExactAssetImage(_path+image+".png"),
           fit: BoxFit.fill
+
         )
       ),
     );
