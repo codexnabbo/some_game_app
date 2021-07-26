@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:some_game_app/constants.dart';
+import 'package:some_game_app/screens/Details/details_screen.dart';
 class ChampionShard extends StatelessWidget {
   const ChampionShard({
     Key? key,
@@ -13,8 +14,12 @@ class ChampionShard extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-
-    return Container(
+    return GestureDetector(
+      onTap: () {Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => DetailsScreen(image: image,)),
+      );},
+    child: Container(
       /*child: Image(
         image: AssetImage("assets/immagini/campioni/kaisa.png",),
         fit: BoxFit.cover,
@@ -36,6 +41,7 @@ class ChampionShard extends StatelessWidget {
 
         )
       ),
+    )
     );
   }
 }
