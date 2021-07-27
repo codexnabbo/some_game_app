@@ -30,10 +30,29 @@ class Body extends StatelessWidget {
 
           ),
           SizedBox( height: size.height * 0.05,),
-          ChampionShard(size: size,image: "kaisa"),
-          ChampionShard(size: size,image: "jhin"),
-          ChampionShard(size: size,image: "kaisa"),
-          ChampionShard(size: size,image: "jhin"),
+          ChampionShard(
+            size: size,
+            image: "kaisa",
+            name: "Kaisa",
+            nickname: "Dauther of the void",
+            price: 6300,),
+          ChampionShard(size: size,
+            image: "jhin",
+            name: "Jhin",
+            nickname: "Cecchino",
+            price: 6300,),
+          ChampionShard(
+            size: size,
+            image: "kaisa",
+            name: "Kaisa",
+            nickname: "Dauther of the void",
+            price: 6300,),
+          ChampionShard(
+            size: size,
+            image: "jhin",
+            name: "Jhin",
+            nickname: "Cecchino",
+            price: 6300,),
         ]
         ),
       );

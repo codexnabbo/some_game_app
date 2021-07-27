@@ -6,18 +6,21 @@ import 'package:some_game_app/screens/Details/details_screen.dart';
 class ChampionShard extends StatelessWidget {
   const ChampionShard({
     Key? key,
-    required this.size, required this.image,
+    required this.size, required this.image, required this.name, required this.nickname, required this.price,
   }) : super(key: key);
 
   final Size size;
   final String _path = "assets/immagini/campioni/";
   final String image;
+  final String name;
+  final String nickname;
+  final int price;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => DetailsScreen(image: image,)),
+        MaterialPageRoute(builder: (context) => DetailsScreen(image: image, name:name ,nickname: nickname,price: price,)),
       );},
     child: Container(
       /*child: Image(
